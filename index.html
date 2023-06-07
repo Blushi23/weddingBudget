@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Oleo+Script&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <title>Wedding Balance</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="display-2 text-center">Wedding <span class="glitter"><i
+                    class="fa-solid fa-champagne-glasses"></i></span> Calculator
+        </h2>
+        <div class="alert text-center" id="balance" role="alert">
+            Balance:
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <select class="form-select" aria-label="Default select example" id="type">
+                    <option value="income">Gift</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control mt-3" id="description" placeholder="Description">
+                    <label for="Description">Description</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control mt-3" id="payer" placeholder="who paid?">
+                    <label for="payer">Who paid?</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="amount" placeholder="Amount">
+                    <label for="Amount">Amount</label>
+                </div>
+
+                <button type="submit" class="btn  w-100 mt-3" onclick="addNewAction()">Add</button>
+            </div>
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Who paid?</th>
+                            <th>Amount</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="actions">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
