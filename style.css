@@ -13,6 +13,7 @@ body {
 .glitter {
     background: url("/images/glitter.gif");
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
