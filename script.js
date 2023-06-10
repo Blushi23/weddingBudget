@@ -42,20 +42,12 @@ window.addNewAction = () => {
 
 window.updateAction = (id) => {
     //prompt for new amount
+    let newPayer = prompt("Who paid?");
     let newAmount = prompt("Enter the new amount:");
-    if (newAmount == null || newAmount == "" || newAmount != +newAmount)
-        alert("Sorry! Something went wrong");
+    if (newPayer == null || newPayer == "" || newAmount == null || newAmount == "" || newAmount != +newAmount) alert("Sorry! Something went wrong");
     else {
         //update action
         manager.updateAction(id, +newAmount)
-        showActionsInTable();
-    }
-
-    //prompt for new payer
-    let newPayer = prompt("Who paid?");
-    if (newPayer == null || newPayer == "")
-        alert("Sorry! Something went wrong");
-    else {
         manager.updateActionPayer(id, newPayer)
         localStorage.setItem('actions', JSON.stringify(manager.actions));
         showActionsInTable();

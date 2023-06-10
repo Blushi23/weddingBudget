@@ -5,11 +5,6 @@ export default class actionsManager {
         this.balance = 0;
     }
 
-
-
-
-
-
     get(propName) {
         return this[propName];
     }
