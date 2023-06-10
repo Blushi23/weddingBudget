@@ -16,6 +16,10 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 } */
+.container img {
+    height: 80px;
+    width: 80px;
+}
 
 .btn {
     background-color: #a40606;
