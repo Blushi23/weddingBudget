@@ -1,11 +1,17 @@
 export default class actionsManager {
     constructor() {
-        this.actions = [];
+        // this.actions = [];
+        this.actions = localStorage.getItem('actions') ? JSON.parse(localStorage.getItem('actions')) : [];
         this.balance = 0;
     }
+
+
+
+
+
+
     get(propName) {
         return this[propName];
-
     }
 
     set(propName, value) {
@@ -15,7 +21,9 @@ export default class actionsManager {
     addAction(action) {
         this.actions.push(action);
         this.calcBalance();
+        localStorage.setItem('actions', JSON.stringify(this.actions));
     }
+
     deleteAction(id) {
         let indexToDelete = this.actions.findIndex((action) => action.id == id);
         this.actions.splice(indexToDelete, 1);
@@ -37,3 +45,4 @@ export default class actionsManager {
         document.getElementById("balance").innerText = `Balance: ${this.balance}`;
     }
 }
+

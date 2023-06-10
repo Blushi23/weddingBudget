@@ -1,17 +1,13 @@
 import Action from "/classes/action.js";
 import actionsManager from "/classes/actionsManager.js";
 let manager = new actionsManager();
-let DJ = new Action("expense", "DJ", 0, "");
-manager.addAction(DJ);
-let Dress = new Action("expense", "Dress", 0, "");
-manager.addAction(Dress);
-// manager.addAction(new Action("income", "salary", 10000));
+// let DJ = new Action("expense", "DJ", 0, "");
+// manager.addAction(DJ);
+// let Dress = new Action("expense", "Dress", 0, "");
+// manager.addAction(Dress);
 console.log(manager.actions);
-// manager.deleteAction(DJ.id);
-// manager.deleteAction(Dress.id);
-// console.log(manager.actions);
-manager.updateAction(DJ.id, 0)
-manager.updateAction(Dress.id, 0)
+// manager.updateAction(DJ.id, 0)
+// manager.updateAction(Dress.id, 0)
 manager.calcBalance();
 console.log(manager.balance);
 
@@ -61,6 +57,7 @@ window.updateAction = (id) => {
         alert("Sorry! Something went wrong");
     else {
         manager.updateActionPayer(id, newPayer)
+        localStorage.setItem('actions', JSON.stringify(manager.actions));
         showActionsInTable();
     }
 
@@ -70,6 +67,7 @@ window.deleteAction = (id) => {
     //confirm
     if (confirm("Are you sure?")) {
         manager.deleteAction(id);
+        localStorage.setItem('actions', JSON.stringify(manager.actions));
         showActionsInTable();
     }
 };
