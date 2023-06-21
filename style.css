@@ -45,3 +45,8 @@ body {
 .table {
     font-weight: bold;
 }
+
+footer {
+    text-align: center;
+    font-family: Diphylleia;
+}

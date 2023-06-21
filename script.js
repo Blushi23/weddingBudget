@@ -49,6 +49,7 @@ window.updateAction = (id) => {
         //update action
         manager.updateAction(id, +newAmount)
         manager.updateActionPayer(id, newPayer)
+
         localStorage.setItem('actions', JSON.stringify(manager.actions));
         showActionsInTable();
     }
@@ -59,6 +60,7 @@ window.deleteAction = (id) => {
     //confirm
     if (confirm("Are you sure?")) {
         manager.deleteAction(id);
+
         localStorage.setItem('actions', JSON.stringify(manager.actions));
         showActionsInTable();
     }
