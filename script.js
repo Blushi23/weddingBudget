@@ -1,21 +1,13 @@
 import Action from "/classes/action.js";
 import actionsManager from "/classes/actionsManager.js";
 let manager = new actionsManager();
-// let DJ = new Action("expense", "DJ", 0, "");
-// manager.addAction(DJ);
-// let Dress = new Action("expense", "Dress", 0, "");
-// manager.addAction(Dress);
-console.log(manager.actions);
-// manager.updateAction(DJ.id, 0)
-// manager.updateAction(Dress.id, 0)
 manager.calcBalance();
-console.log(manager.balance);
 
 // a function that shows all the actions according to manager actions array.
 function showActionsInTable() {
     document.getElementById("actions").innerHTML = "";
     for (let action of manager.actions) {
-        document.getElementById("actions").innerHTML += `<tr class=${action.type == "income" ? "text-success" : "text-danger"}> <td> ${action.description} </td><td>${action.payer} </td><td>${action.amount}</td><td><i class="fa-solid fa-pen-to-square" onclick="updateAction(${action.id})"></i> </td> <td><i class="fa-solid fa-trash" onclick="deleteAction(${action.id})"></i></td></tr > `
+        document.getElementById("actions").innerHTML += `<tr class=${action.type == "income" ? "text-success" : "text-danger"}> <td> ${action.description} </td><td>${action.payer} </td><td>${action.amount}</td><td><i class="fa-solid fa-pen-to-square" onclick="updateAction(${action.id})"></i> </td> <td><i class="fa-solid fa-trash" onclick="deleteAction(${action.id})"></i></td></tr>`
     }
 }
 showActionsInTable();
@@ -32,7 +24,6 @@ window.addNewAction = () => {
 
     //add newAction to manager actions array
     manager.addAction(newAction);
-    console.log(manager.actions);
     document.getElementById("description").value = "";
     document.getElementById("payer").value = "";
     document.getElementById("amount").value = "";

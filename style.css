@@ -5,17 +5,10 @@ body {
 }
 
 .container h2 {
-    /* font-weight: bold; */
     font-family: "oleo script";
     color: #a40606;
 }
 
-/* .glitter {
-    background: url("/images/glitter.gif");
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
 .container img {
     height: 80px;
     width: 80px;
@@ -29,7 +22,6 @@ body {
 .btn:hover {
     background-color: #f29a9a;
     color: #a40606;
-    /* font-weight: bold; */
 }
 
 #balance {
