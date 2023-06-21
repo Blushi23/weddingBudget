@@ -1,6 +1,6 @@
 # weddingBudget
 
-<p>The Wedding Calculator is a web application built using HTML, CSS, SCSS, JavaScript, Bootstrap, and Font Awesome.
+<p>The Wedding Calculator is a web application built using HTML, CSS, JavaScript, Bootstrap, and Font Awesome.
   It provides an easy-to-use interface for couples to estimate and plan their wedding expenses and incomes.</p>
 
 <h3>Features</h3>
@@ -18,7 +18,7 @@ To use the Wedding Calculator, simply open the index.html file in a web browser.
 
   <h3>Technologies Used</h3>
 <b>HTML:</b> HTML used for structuring the web page.<br>
-<b>CSS and SCSS:</b> Style sheet languages used for designing and customizing the visual appearance of the application.<br>
+<b>CSS:</b> Style sheet language used for designing and customizing the visual appearance of the application.<br>
   <b>JavaScript:</b> Programming language used to add interactivity and perform calculations within the calculator.<br>
   <b>Bootstrap:</b> CSS framework used for creating a responsive and mobile-first design.<br>
   <b>Font Awesome:</b> Icon toolkit used to enhance the visual elements of the application.
